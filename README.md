@@ -1,23 +1,14 @@
-# Bi-directional Adapter for Multimodal Tracking
-The official implementation for the AAAI2024 paper [**Bi-directional Adapter for Multimodal Tracking**](https://arxiv.org/abs/2312.10611).
+# Efficient Hybrid Adapter for Visible-Thermal Tracking
+The official implementation for the ICIP 2026 Paper Efficient Hybrid Adapter for Visible-Thermal Tracking
 
-
-
-## Models
-
-[Models & Raw Results](https://pan.baidu.com/s/1Fcv2BX2HTb8M8u2IRJ75aQ?pwd=ak66)
-(Baidu Driver: ak66)
-
-[Models & Raw Results](https://drive.google.com/drive/folders/1l8j8Ns8dGyrKrFrmetHPdqKPO0wNrZ1n?usp=sharing)
-(Google Drive)
 
 
 ## Usage
 ### Installation
 Create and activate a conda environment:
 ```
-conda create -n bat python=3.7
-conda activate bat
+conda create -n hat python=3.7
+conda activate hat
 ```
 Install the required packages:
 ```
@@ -38,7 +29,7 @@ $<PATH_of_Datasets>
         ...
         |-- trainlist.txt
 ```
-
+please use the tool for LasHeR dataset, provided in another repo of mine, to change the format of namings of data.
 ### Path Setting
 Run the following command to set paths:
 ```
@@ -71,31 +62,15 @@ We refer you to use [LasHeR Toolkit](https://github.com/BUGPLEASEOUT/LasHeR) for
 and refer you to use [MPR_MSR_Evaluation](https://sites.google.com/view/ahutracking001/) for RGBT234 evaluation.
 
 
-#### For RGB-E benchmark
-[VisEvent]\
-Modify the <DATASET_PATH> and <SAVE_PATH> in```./RGBE_workspace/test_rgbe_mgpus.py```, then run:
-```
-bash eval_rgbe.sh
-```
-We refer you to use [VisEvent_SOT_Benchmark](https://github.com/wangxiao5791509/VisEvent_SOT_Benchmark) for evaluation.
-
 ## Citation
 Please cite our work if you think it is useful for your research.
 
-```bibtex
-@inproceedings{BAT,
-  title={Bi-directional Adapter for Multimodal Tracking},
-  author={Bing Cao, Junliang Guo, Pengfei Zhu, Qinghua Hu},
-  booktitle={AAAI Conference on Artificial Intelligence},
-  year={2024}
-}
-```
 
 
 
 
 
 ## Acknowledgment
-- This repo is based on [ViPT](https://github.com/jiawen-zhu/ViPT) which is an exellent work, helps us to quickly implement our ideas.
+- This repo is based on [BAT](https://github.com/SparkTempest/BAT).
 - Thanks for the [OSTrack](https://github.com/botaoye/OSTrack) and [PyTracking](https://github.com/visionml/pytracking) library.
 
